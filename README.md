@@ -1,4 +1,4 @@
-# SSH-honeypot
+# ssh-honeypot
 
 ## Purpose
 The purpose of this project is to learn more about honeypots and to collect broad threat intelligence.

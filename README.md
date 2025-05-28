@@ -15,4 +15,5 @@ The purpose of this project is to learn more about honeypots and to collect broa
 
 
 
-NEED TO UPDATE THIS, THE HONEYPOT IS DONE
+NEED TO UPDATE THIS, THE HONEYPOT IS DONE https://gabe-terr.github.io
+

@@ -7,6 +7,7 @@ This project captures and visualizes brute-force login attempts to an SSH honeyp
 * **Honeypot Tool**: [`ssh-honeypot`](https://github.com/droberson/ssh-honeypot)
 * **Logging Port**: Incoming port 22 redirected to 2223 via iptables
 * **Secure Admin Access**: Custom SSH port (2222) with public key authentication
+* **Cloud Computing**: Akamai Linode utilized to host Ubuntu machine.
 
 ## 📊 Dashboard Features
 

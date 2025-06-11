@@ -1,19 +1,58 @@
-# ssh-honeypot-dashboard
+# SSH Honeypot Dashboard
 
-## Purpose
-The purpose of this project is to learn more about honeypots and to collect broad threat intelligence.
+This project captures and visualizes brute-force login attempts to an SSH honeypot. The backend logs attacks and aggregates statistics; the frontend provides a public dashboard with masked attacker data.
 
-## Resources
-- Akamai Linode
-- https://github.com/droberson/ssh-honeypot
+## 🔐 Honeypot Overview
 
-## Guide
-- Created a Nanode with a 1GB plan using Akamai Linode.
-- Followed `droberson`'s quickstart guide.
-- 
+* **Honeypot Tool**: [`ssh-honeypot`](https://github.com/droberson/ssh-honeypot)
+* **Logging Port**: Incoming port 22 redirected to 2223 via iptables
+* **Secure Admin Access**: Custom SSH port (2222) with public key authentication
 
+## 📊 Dashboard Features
 
+* Interactive **log table** with masked passwords and redacted IPs
+* **Graphs** for top attempted usernames and passwords (powered by Chart.js)
+* **Stats**: total login attempts and total unique attacker IPs
+* Toggle graphs on/off for cleaner viewing
 
+Live demo: [https://your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)
 
-NEED TO UPDATE THIS, THE HONEYPOT IS DONE https://gabe-terr.github.io
+## 📁 Project Structure
 
+```
+.
+├── index.html        # Public dashboard (GitHub Pages)
+├── app.py            # Flask API server for logs + stats
+├── redact_logs.py    # Redaction script for publishing logs
+├── /logs             # Contains redacted logs (optional)
+├── /static           # (Optional) for CSS or JS files
+└── README.md
+```
+
+## ⚠️ Ethical Considerations
+
+This project is strictly for **educational and research purposes**. It does **not** target or harm any external systems. All data collected is:
+
+* Passively obtained from unsolicited login attempts
+* Redacted to protect attacker identity (e.g., partial IP masking, password masking)
+* Never used for retaliation or unauthorized access
+
+Please ensure your honeypot runs on a secure, isolated host. Never deploy one on a production server.
+
+## 🧐 Future Considerations
+
+* 🔄 **Live auto-refresh** of logs and charts
+* 🌎 **GeoIP** map of attacker locations
+* 📅 **Filter by date** range or time windows
+* 🧠 **ML anomaly detection** on login patterns
+* ☁️ Host backend Flask API with HTTPS (e.g., via Heroku/Fly.io)
+
+---
+
+## 💬 Questions or Ideas?
+
+Feel free to fork or submit an issue if you’d like to expand this project or share thoughts!
+
+---
+
+> Built with 🐍 Flask, ⚡ iptables, and ❤️ for infosec

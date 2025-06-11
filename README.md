@@ -34,7 +34,6 @@ Live demo: [https://your-username.github.io/your-repo-name](https://your-usernam
 This project is strictly for **educational and research purposes**. It does **not** target or harm any external systems. All data collected is:
 
 * Passively obtained from unsolicited login attempts
-* Redacted to protect attacker identity (e.g., partial IP masking, password masking)
 * Never used for retaliation or unauthorized access
 
 Please ensure your honeypot runs on a secure, isolated host. Never deploy one on a production server.
